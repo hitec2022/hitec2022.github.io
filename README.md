@@ -1,53 +1,51 @@
-# accent
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kronik3r/daktilo/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-#### [Demo & Documentation](http://ankitsultana.com/accent)
+# Daktilo
+Daktilo is a [Jekyll](jekyllrb.com) theme with a minimal design inspired from typewriters.
 
-### Installation
+# More info and Live preview
+[Click here](http://daktilo.github.io/) to see the theme in action.
 
-I'd strongly recommend you to fork [accent](http://github.com/bk2dcradle/accent) and use the "upstream" strategy described on [this page](https://help.github.com/articles/fork-a-repo/) to
-keep accent up to date.
+# Features
+- Fully responsive
+- [Disqus](https://disqus.com/) integration for comments.
+- Google Analytics integration.
+- Syntax Highlighter (using [highlight.js](https://highlightjs.org/)).
+- Support for categories.
+- Font-Awesome Icons.
+- Optimized for SEO.
+- Coolest [404 page ever](http://kronik3r.github.io/daktilo/404.html).
 
-If you don't want to do that, just clone [accent](http://github.com/bk2dcradle/accent) and use
+# How to use it
+Start by cloning the repository, then check the `_config.yml` file and change it accordingly.
+Note that the `title` property is what will be displayed as logo.
 
-```bash
-bundle exec jekyll serve
-```
-in the root of the accent directory, or, simply [download](https://github.com/bk2dcradle/accent/archive/gh-pages.zip) accent.
+Finally execute `jekyll serve --watch` and head to [localhost:4000](http://127.0.0.1:4000) to see the result.
 
-### Customization
+# Using categories
+Categories are little bit tricky. Please make sure to do the following for each category:
 
-You can edit the variables in `_config.yml` as per your needs. Edit only the variables under the section marked *User Settings*.
+- Create a file within `categories` folder with the name of your category
+For example let's say that we have a category called `An Awesome Category` you will need to add an `an-awesome-category.html` file with this content:
 
-Most of the variables are self explanatory. Notes about few of the non obvious ones:
-
-1. You can change the **hex value** of the variable `$accent-color` in `_sass/_style.scss` to any color value that you want. This will change the accent of the theme.
-
-2. Set `intro` to `true` to reveal a short bio section on the index page.
-
-3. Setting `about_footer` to *true* or *false* will turn the `about` section at the bottom of every post to *on* or *off* respectively.
-
-4. `description` is the summary that will show up in places like facebook thumbnails,
-twitter cards and google search results.
-
-
-*Note:* Don't change any variable under *Build Settings*.
-
+``` html
+---
+layout: category
+category: an-awesome-category
+permalink: /categories/an-awesome-category/
 ---
 
-### Usage
-
-* To create a new post, simply save the `.markdown` file in the `_posts` directory in the format.
-
-```
-year-month-day-name-of-the-file.markdown
 ```
 
-* For Syntax highlighting, accent uses *Rouge* which is the default highlighter in Jekyll 3 and above. If you don't know how to highlight a code block, [refer](http://jekyllrb.com/docs/templates/).
+- Create an entry inside `_data/categories.yml`
 
-* To set up Google Analytics tracking id, just set the `tracking_id` variable in `_config.yml`.
+``` html
+- slug: an-awesome-category
+  name: An Awesome Category
+```
 
----
+- Then you will see it in the footer in the `Explore` section.
 
-### License
+# License
 
-[MIT](https://github.com/bk2dcradle/accent/blob/gh-pages/LICENSE). Copyright &copy; [Ankit Sultana](http://twitter.com/AnkitSultana)
+The contents of this repository is licensed under [The MIT License.](https://opensource.org/licenses/MIT)
