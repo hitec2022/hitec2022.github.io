@@ -1,12 +1,15 @@
 ---
 layout: default
 ---
-{% include post/title.html %}
 
-<div class="content">
-    {{ content }}
-</div>
+{%-include back_link.html-%}
 
-{% include post/about.html %}
+<article>
+  <p class="post-meta">
+    <time datetime="{{ page.date }}">{{ page.date | date: site.theme_config.date_format }}</time>
+  </p>
+  
+  <h1>{{ page.title }}</h1>
 
-{% include externals/disqus.html %}
+  {{ content }}
+</article>
