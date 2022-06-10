@@ -1,8 +1,15 @@
-Jekyll Clean
-============
+---
+layout: post
+title: "Jekyll Clean Theme"
+date: 2014-08-22 16:25:06 -0700
+comments: false
+---
 
 * Get it from [github](https://github.com/scotte/jekyll-clean).
 * See the [live demo](https://scotte.github.io/jekyll-clean).
+* See it [in action on my own blog](https://scotte.org).
+
+Welcome to the sample post for the Jekyll Clean theme.
 
 A simple and clean Jekyll theme using [bootstrap](http://getbootstrap.com)
 (not to be confused with jekyll-bootstrap) that's easy to modify and very
@@ -44,7 +51,6 @@ You can setup an upstream tracking repository like so:
 ```
 $ git remote add upstream git@github.com:scotte/jekyll-clean.git
 ```
-
 And now when you wish to merge your own branch onto the latest version of the
 theme, simply do:
 
@@ -97,11 +103,6 @@ because that's the name of this project.
 If you plan to deploy this as user pages, the deployed branch is "master"
 and baseurl is configured to '' (i.e. empty).
 
-Using Gitlab Pages
-==================
-
-A basic .gitlab-ci.yml is provided with this project.
-
 Comment Systems
 ===============
 
@@ -122,6 +123,7 @@ your data).
 In _config.yml you'll need to set **isso** to the fully-qualified URL
 if your isso server (this is the value for **data-isso** passed to the
 isso JS). Make sure **comments** is true.
+
 
 Disqus Comments
 ===============
@@ -166,10 +168,6 @@ roll = random.randint(1, 20)
 print('You rolled a %d.' % roll)
 ```
 
-NOTE: The example in this README.md will render differently than in the
-final jekyll output. See the [live demo](https://scotte.github.io/jekyll-clean)
-to see how it really looks.
-
 You can, of course, use any theme you wish, see the jekyll and pygments
 documentation for more details.
 
@@ -177,7 +175,7 @@ License
 =======
 
 The content of this theme is distributed and licensed under a
-![License Badge](/images/cc_by_88x31.png)
+![License Badge]({{ site.baseurl}}/images/cc_by_88x31.png)
 [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
 
     This license lets others distribute, remix, tweak, and build upon your work,
