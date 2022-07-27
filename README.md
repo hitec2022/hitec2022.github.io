@@ -1,105 +1,85 @@
-<div align="center">
+<p align="right">
+    <a href="https://badge.fury.io/rb/just-the-docs"><img src="https://badge.fury.io/rb/just-the-docs.svg" alt="Gem version"></a> <a href="https://github.com/just-the-docs/just-the-docs/actions/workflows/ci.yml"><img src="https://github.com/just-the-docs/just-the-docs/actions/workflows/ci.yml/badge.svg" alt="CI Build status"></a> <a href="https://app.netlify.com/sites/just-the-docs/deploys"><img src="https://api.netlify.com/api/v1/badges/9dc0386d-c2a4-4077-ad83-f02c33a6c0ca/deploy-status" alt="Netlify Status"></a>
+</p>
+<br><br>
+<p align="center">
+    <h1 align="center">Just the Docs</h1>
+    <p align="center">A modern, highly customizable, and responsive Jekyll theme for documentation with built-in search.<br>Easily hosted on GitHub Pages with few dependencies.</p>
+    <p align="center"><strong><a href="https://just-the-docs.github.io/just-the-docs/">See it in action!</a></strong></p>
+    <br><br><br>
+</p>
 
-  # Chirpy Jekyll Theme
+![jtd](https://user-images.githubusercontent.com/896475/47384541-89053c80-d6d5-11e8-98dc-dba16e192de9.gif)
 
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+## Installation
 
-  [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy?color=brightgreen)](https://rubygems.org/gems/jekyll-theme-chirpy)
-  [![Build Status](https://github.com/cotes2020/jekyll-theme-chirpy/workflows/build/badge.svg?branch=master&event=push)](https://github.com/cotes2020/jekyll-theme-chirpy/actions?query=branch%3Amaster+event%3Apush)
-  [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4e556876a3c54d5e8f2d2857c4f43894)](https://www.codacy.com/gh/cotes2020/jekyll-theme-chirpy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cotes2020/jekyll-theme-chirpy&amp;utm_campaign=Badge_Grade)
-  [![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy.svg)](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE)
-  [![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg)](https://996.icu)
+### via GitHub Pages remote theme
 
-  [**Live Demo →**](https://cotes2020.github.io/chirpy-demo)
+The quickiest way to use Just The Docs is to use GitHub pages [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/) feature in your `_config.yml` file:
 
-  [![Devices Mockup](https://raw.githubusercontent.com/cotes2020/chirpy-images/main/commons/devices-mockup.png)](https://cotes2020.github.io/chirpy-demo)
+```yaml
+remote_theme: just-the-docs/just-the-docs
+```
+### via RubyGems:
 
-</div>
+Alternatively you can install it as a Ruby Gem.
 
-## Features
+Add this line to your Jekyll site's Gemfile:
 
-- Localized Layout
-- Dark/Light Theme Mode
-- Pinned Posts
-- Hierarchical Categories
-- Last Modified Date for Posts
-- Table of Contents
-- Auto-generated Related Posts
-- Syntax Highlighting
-- Mathematical Expressions
-- Mermaid Diagram & Flowchart
-- Disqus/Utterances/Giscus Comments
-- Search
-- Atom Feeds
-- Google Analytics
-- GA Pageviews Reporting
-- SEO & Performance Optimization
-
-
-## Quick Start
-
-Before starting, please follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems`, `Jekyll`, and `Bundler`. In addition, [Git](https://git-scm.com/) is also required to be installed.
-
-### Step 1. Creating a New Site
-
-Create a new repository from the [**Chirpy Starter**](https://github.com/cotes2020/chirpy-starter/generate) and name it `<GH_USERNAME>.github.io`, where `GH_USERNAME` represents your GitHub username.
-
-### Step 2. Installing Dependencies
-
-Before running for the first time, go to the root directory of your site, and install dependencies as follows:
-
-```console
-$ bundle
+```ruby
+gem "just-the-docs"
 ```
 
-### Step 3. Running Local Server
+And add this line to your Jekyll site's `_config.yml`:
 
-Run the following command in the root directory of the site:
-
-```console
-$ bundle exec jekyll s
+```yaml
+theme: just-the-docs
 ```
 
-Or run with Docker:
+And then execute:
 
-```console
-$ docker run -it --rm \
-    --volume="$PWD:/srv/jekyll" \
-    -p 4000:4000 jekyll/jekyll \
-    jekyll serve
-```
+    $ bundle
 
-After a while, navigate to the site at <http://localhost:4000>.
+Or install it yourself as:
 
-## Documentation
+    $ gem install just-the-docs
 
-For more details on usage, please refer to the tutorial on the [demo website](https://cotes2020.github.io/chirpy-demo/) / [wiki](https://github.com/cotes2020/jekyll-theme-chirpy/wiki). Note that the tutorial is based on the [latest tag](https://github.com/cotes2020/jekyll-theme-chirpy/tags), and the features of the default branch are usually ahead of the documentation.
+Alternatively, you can run it inside Docker while developing your site
+
+    $ docker-compose up
+
+## Usage
+
+[View the documentation](https://just-the-docs.github.io/just-the-docs/) for usage information.
 
 ## Contributing
 
-Welcome to report bugs, improve code quality or submit a new feature. For more information, see [contributing guidelines](.github/CONTRIBUTING.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/just-the-docs/just-the-docs. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-## Credits
+### Submitting code changes:
 
-This theme is mainly built with [Jekyll](https://jekyllrb.com/) ecosystem, [Bootstrap](https://getbootstrap.com/), [Font Awesome](https://fontawesome.com/) and some other wonderful tools (their copyright information can be found in the relevant files). The avatar and favicon design come from [Clipart Max](https://www.clipartmax.com/middle/m2i8b1m2K9Z5m2K9_ant-clipart-childrens-ant-cute/).
+- Open a [Pull Request](https://github.com/just-the-docs/just-the-docs/pulls)
+- Ensure all CI tests pass
+- Await code review
+- Bump the version number in `just-the-docs.gemspec` and `package.json` according to [semantic versioning](https://semver.org/).
 
-:tada: Thanks to all the volunteers who contributed to this project, their GitHub IDs are on [this list](https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors). Also, I won't forget those guys who submitted the issues or unmerged PR because they reported bugs, shared ideas, or inspired me to write more readable documentation.
+### Design and development principles of this theme:
 
-Last but not least, thank [JetBrains][jb] for providing the OSS development license.
+1. As few dependencies as possible
+2. No build script needed
+3. First class mobile experience
+4. Make the content shine
 
-## Sponsoring
+## Development
 
-If you like this theme or find it helpful, please consider sponsoring me, because it will encourage and help me better maintain the project, I will be very grateful!
+To set up your environment to develop this theme, run `bundle install`.
 
-[![Ko-fi](https://img.shields.io/badge/-Buy%20Me%20a%20Coffee-ff5f5f?logo=ko-fi&logoColor=white)](https://ko-fi.com/coteschung)
-[![Wechat Pay](https://img.shields.io/badge/-Tip%20Me%20on%20WeChat-brightgreen?logo=wechat&logoColor=white)][cn-donation]
-[![Alipay](https://img.shields.io/badge/-Tip%20Me%20on%20Alipay-blue?logo=alipay&logoColor=white)][cn-donation]
+A modern [devcontainer configuration](https://code.visualstudio.com/docs/remote/containers) for VSCode is included.
+
+Your theme is set up just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+When the theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
 
 ## License
 
-This work is published under [MIT](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE) License.
-
-<!-- ReadMe links -->
-
-[jb]: https://www.jetbrains.com/?from=jekyll-theme-chirpy
-[cn-donation]: https://cotes.gitee.io/alipay-wechat-donation/
+The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
