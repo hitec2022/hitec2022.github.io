@@ -1,1 +1,8 @@
 remote_theme: just-the-docs/just-the-docs
+
+title: hitec Dev
+description: Hitec 가 해보는 개발
+baseurl: "/"
+url: "https://hitec2022.github.io"
+
+color_schema: dark

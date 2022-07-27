@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Develop
+title: Develope
 nav_order: 1
-description: "description"
-permalink: /
+has_children: true
 ---
 
 # Develop
