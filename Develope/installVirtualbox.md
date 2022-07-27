@@ -2,7 +2,7 @@
 layout: default
 title: install VirtualBox
 nav_order: 1
-parent: develope
+parent: Develope
 ---
 
 # How To Install VirtualBox
