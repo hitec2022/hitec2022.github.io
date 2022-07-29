@@ -1,6 +1,6 @@
 ---
 layout: default
-title: install VirtualBox
+title: VirtualBox 설치
 nav_order: 1
 parent: Develope
 ---
