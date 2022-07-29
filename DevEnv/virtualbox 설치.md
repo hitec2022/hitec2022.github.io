@@ -13,3 +13,6 @@ parent: 개발환경
 ## 2. virtualbox 설치
 
 ## 3. virtualbox extension pack 설치
+
+![설치된 virtualbox](../image/DevEnv/Screenshot%202022-07-29%20오전%2011_17_25.png)
+
