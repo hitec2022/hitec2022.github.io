@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Develope
+title: 개발
 nav_order: 3
 has_children: true
 ---
