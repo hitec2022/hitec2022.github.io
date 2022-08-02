@@ -1,6 +1,6 @@
 ---
 layout: default
-title: VirtualBox 설치
+title: Spring Boot 로 개발 시작   
 nav_order: 1
 parent: 개발
 ---
@@ -43,8 +43,8 @@ mvn spring-boot:run
 * 웹 테스트를 위해 간단한 코드 추가   
   controller 디렉토리 생성 후 TestContreoller.java 파일 생성   
 
-  
-```
+
+```java
 package com.hitec.testdemo.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -59,4 +59,23 @@ public class TestController {
     }
 }
 
+```
+
+* dockernizer 하기위한 dockerfile
+```Dockerfile
+FROM openjdk:11.0.16-jre
+
+ARG APP_FILE
+
+RUN echo ${APP_FILE}
+RUN mkdir /logs
+RUN chown 1000:1000 /logs
+RUN mkdir /app
+RUN chown 1000:1000 /app
+
+USER 1000:1000
+WORKDIR /app
+COPY  --chown=1000:1000 ${APP_FILE} /app/app.jar
+
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
 ```
