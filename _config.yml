@@ -12,3 +12,10 @@ color_scheme: dark
 ga_tracking: G-6J3Z9CH88V
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
 
+# Aux links for the upper right navigation
+aux_links:
+  "Hitec Email":
+    - "lightinglake@hanmail.net"
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: true
