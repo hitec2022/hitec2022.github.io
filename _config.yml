@@ -5,4 +5,10 @@ description: Hitec 가 해보는 개발
 baseurl: "/"
 url: "https://hitec2022.github.io"
 
-color_schema: dark
+color_scheme: dark
+
+# Google Analytics Tracking (optional)
+# e.g, UA-1234567-89
+ga_tracking: G-6J3Z9CH88V
+ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
+

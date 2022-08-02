@@ -145,48 +145,48 @@ parent: 개발환경
             4. 생성 후 리스트에서 선택   
 
 2. 파이프라인 작성   
+   
     1. "Jenkinsfile" 파일 생성 (프로젝트 소스의 루트 디렉토리에 생성)   
-
-    ```Jenkinsfile
-    pipeline {
-        agent any
-        stages {
-            stage('BUILD') {
-                steps {
-                    sh 'mvn package -DskipTests'
+        ```Jenkinsfile
+        pipeline {
+            agent any
+            stages {
+                stage('BUILD') {
+                    steps {
+                        sh 'mvn package -DskipTests'
+                    }
                 }
-            }
-            stage('STOP App') {
-                steps {
-                    script {
-                        try {
-                            sh 'docker stop devtest'
-                            sh 'docker rm devtest' 
-                        } catch (err) {
-                            echo err.getMessage()
-                            echo 'Stop App Failed'
+                stage('STOP App') {
+                    steps {
+                        script {
+                            try {
+                                sh 'docker stop devtest'
+                                sh 'docker rm devtest' 
+                            } catch (err) {
+                                echo err.getMessage()
+                                echo 'Stop App Failed'
+                            }
                         }
                     }
                 }
-            }
-            stage('Dockernizer') {
-                steps {
-                    sh 'docker build --build-arg APP_FILE=target/testdemo*.jar -t devtest:0.0.1 .'
+                stage('Dockernizer') {
+                    steps {
+                        sh 'docker build --build-arg APP_FILE=target/testdemo*.jar -t devtest:0.0.1 .'
+                    }
                 }
-            }
-            stage('Deployment') {
-                steps {
-                    sh 'docker run -p 8081:8080 --name devtest devtest:0.0.1'
+                stage('Deployment') {
+                    steps {
+                        sh 'docker run -p 8081:8080 --name devtest devtest:0.0.1'
+                    }
                 }
             }
         }
-    }
-    ```
+        ```
 
 3. 빌드 및 배포 테스트
     1. Jenkins Dashboard 에서 새로 생성한 Job 선택      
-    ![jenkins git credential](../image/DevEnv/jenkins14.png)    
+        ![jenkins git credential](../image/DevEnv/jenkins14.png)    
     2. 좌측의 Scan multibranch pipeline now 선택   
     3. 실행 하고 있는 브랜치 이름 선택   
-    ![jenkins build](../image/DevEnv/jenkins15.png)    
+        ![jenkins build](../image/DevEnv/jenkins15.png)    
     4. 빌드 배포 과정 확인   
