@@ -190,3 +190,12 @@ parent: 개발환경
     3. 실행 하고 있는 브랜치 이름 선택   
         ![jenkins build](../image/DevEnv/jenkins15.png)    
     4. 빌드 배포 과정 확인   
+    5. local pc에서 확인
+        ```
+        http://<local ip>:<port num>
+        ex) http://192.168.56.1:8081
+        ```
+
+        > Deployment 단계에서 port fowarding 한 포트로 확인   
+        > virtualbox 의 네트워크 설정에서 port fowarding 확인   
+
