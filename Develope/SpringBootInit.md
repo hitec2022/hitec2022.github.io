@@ -8,7 +8,7 @@ parent: 개발
 # Spring Boot 로 개발 시작하기
 
 1. [Spring Initializr](https://start.spring.io/, "Spring Initializr") 
-    * 스프링 관련되 프로젝트를 손쉽게 생겅해주는 사이트
+    * 스프링 관련된 프로젝트를 손쉽게 생성해주는 사이트
    ![Spring Initializr](../image/Dev/spring1.png)    
 2. 항목선택
     > Project -> 메이블, 그레들 중 선택
