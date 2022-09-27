@@ -2,7 +2,7 @@
 layout: default
 title: virtualbox 리눅스 디스크 늘이기
 nav_order: 1
-parent: 기술팀
+parent: 기술팁
 ---
 
 # virtualbox 리눅스 디스크 늘이기
