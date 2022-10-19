@@ -63,19 +63,28 @@ parent: 개발
     //Board.java
     @Entity
     @Table(name = "board")
-    public class Board{
+    @Getter
+    @Setter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public class Board {
 
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
-        private long id;
+        private Long id;
 
         @Column(name = "title")
         private String title;
 
         @Column(name = "content")
         private String content;
+
+        @OneToOne
+        BoardUser boardUser;
     }
     ```
+
+    > BoardUser 는 게시글을 사용하는 사용자로 keycloak 연동 때 사용   
 
 5. Repository   
     repository 라는 이름으로 디렉토리를 생성한다.   
@@ -83,6 +92,9 @@ parent: 개발
 
     ```java
     //BoardRepository.java
+    @Repository
+    public interface BoardRepository extends JpaRepository<Board, Long>{
+    }
     ```
 
 6. Service   
@@ -91,6 +103,33 @@ parent: 개발
 
     ```java
     //BoardService.java
+    @Service
+    public class BoardService {
+    
+        BoardRepository boardRepository;
+
+        @Autowired
+        public BoardService(BoardRepository boardRepository){
+            this.boardRepository = boardRepository;
+        }
+
+        public List<Board> boardList(){
+            return boardRepository.findAll();
+        }
+
+        public Board getBoard(Long id){
+            return boardRepository.findById(id).orElseThrow();
+        }
+
+        public Board setBoard(Board board){
+            return boardRepository.save(board);
+        }
+
+        public void removeBoard(Long id){
+            boardRepository.findById(id).ifPresent(board -> boardRepository.delete(board));
+        }
+
+    }
     ```
 
 7.  Controller   
@@ -98,4 +137,53 @@ parent: 개발
     web을 통해 api를 요청을 처리한다. 
     ```java
     //BoardController.java
+    @CrossOrigin(origins = {"http://localhost:3000"}, maxAge=3600, methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.HEAD, RequestMethod.OPTIONS, RequestMethod.PUT} )
+    @RestController
+    public class BoardController {
+
+        BoardService boardService;
+        BoardUserService boardUserService;
+
+        @Autowired
+        public BoardController(BoardService boardService, BoardUserService boardUserService){
+            this.boardService = boardService;
+            this.boardUserService = boardUserService;
+        }
+
+        @GetMapping("/boards")
+        public List<BoardVo> getBoardList(){
+            List<Board> boardList = boardService.boardList();
+
+            List<BoardVo> rtnList = new ArrayList<>();
+            for(Board board : boardList){
+                rtnList.add(new BoardVo(board.getId(), board.getTitle(), board.getContent(), board.getBoardUser().getUsername()));
+            }
+
+            return rtnList;
+        }
+
+        @GetMapping("/board/{boardId}")
+        public BoardVo getBoard(@PathVariable Long boardId){
+            Board board = boardService.getBoard(boardId);
+            return new BoardVo(board.getId(), board.getTitle(), board.getContent(), board.getBoardUser().getUsername());
+        }
+
+        @PostMapping("/board")
+        @Transactional
+        public BoardVo setBoard(@RequestBody BoardVo boardVo){
+            BoardUser boardUser = boardUserService.setUser(new BoardUser(null, boardVo.getUserName()));
+            Board board = boardService.setBoard(new Board(null, boardVo.getTitle(), boardVo.getContent(), boardUser));
+            return new BoardVo(board.getId(), board.getTitle(), board.getContent(), board.getBoardUser().getUsername());
+        }
+
+        @PutMapping("/board")
+        public BoardVo modifyBoard(@RequestBody BoardVo boardVo){
+            Board board = boardService.setBoard(new Board(boardVo.getId(), boardVo.getTitle(), boardVo.getContent(), boardUserService.getUserByName(boardVo.getUserName())));
+            return new BoardVo(board.getId(), board.getTitle(), board.getContent(), board.getBoardUser().getUsername());
+        }
+        
+    }
    ```
+   > 리스트 조회, 한 건 조회, 생성, 수정 에 대한 함수 작성   
+   > 외부와의 통신을 위해서 Model 을 직접 사용하지 않고 Vo를 생성하였음 --> 직접 쓰는 것과 장단점이 있음, 상황에 따라 적절한 걸 써야....
+   > react 에서 개발 할 때 localhost:3000 으로 띄워서 테스트를 진행하기 때문에 CrossOrigin 을 설정   
