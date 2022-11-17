@@ -305,22 +305,22 @@ parent: 개발
         }
 
         export const fetchBoardList = createAsyncThunk('board/boardList', async () => {
-            const response = await axios.get('http://localhost:8899/boards');
+            const response = await axios.get('http://192.168.56.1:8899/boards');
             return response.data;
         })
 
         export const fetchBoard = createAsyncThunk('board/board', async (id) => {
-            const response = await axios.get('http://localhost:8899/board/'.concat(id));
+            const response = await axios.get('http://192.168.56.1:8899/board/'.concat(id));
             return response.data;
         })
 
         export const addBoard = createAsyncThunk('board/addBoard', async (boardObj) => {
-            const response = await axios.post('http://localhost:8899/board', boardObj);
+            const response = await axios.post('http://192.168.56.1:8899/board', boardObj);
             return response.data;
         })
 
         export const editBoard = createAsyncThunk('board/editBoard', async (boardObj) => {
-            const response = await axios.put('http://localhost:8899/board', boardObj);
+            const response = await axios.put('http://192.168.56.1:8899/board', boardObj);
             return response.data;
         })
 

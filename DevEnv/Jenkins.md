@@ -92,6 +92,7 @@ parent: 개발환경
             RUN apt install -y ca-certificates curl gnupg lsb-release
             RUN mkdir -p /etc/apt/keyrings
             RUN curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+            RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
             RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
             RUN apt update -y
             RUN apt upgrade -y
@@ -99,6 +100,8 @@ parent: 개발환경
             RUN apt install -qy maven
             # install docker
             RUN apt install -qy docker-ce-cli
+            # intsll nodejs npm
+            RUN apt install -qy nodejs
 
             #LocalPC의 Docker 로 연결 /var/run/docker.sock 해서 사용
             #LocalPC의 Docker Group ID 로 그룹 생성   
@@ -126,7 +129,7 @@ parent: 개발환경
         1. master는 웹 UI 만 제공하며 빌드를 수행하지 못하도록 수정   
             1. Jenkins관리 > 노드관리 > Built-in Node 항목의 가장 오른쪽 설정아이콘   
             ![jenkins master node](../image/DevEnv/jenkins10.png)    
-            2. Number of executions 항목을 0으로 설정   
+            1. Number of executions 항목을 0으로 설정   
 
 ## 3. Jenkins 빌드 및 배포 (파이프라인)    
 1. jenkins job 생성   

@@ -183,7 +183,85 @@ parent: 개발
         }
         
     }
-   ```
-   > 리스트 조회, 한 건 조회, 생성, 수정 에 대한 함수 작성   
-   > 외부와의 통신을 위해서 Model 을 직접 사용하지 않고 Vo를 생성하였음 --> 직접 쓰는 것과 장단점이 있음, 상황에 따라 적절한 걸 써야....
-   > react 에서 개발 할 때 localhost:3000 으로 띄워서 테스트를 진행하기 때문에 CrossOrigin 을 설정   
+    ```   
+
+    > 리스트 조회, 한 건 조회, 생성, 수정 에 대한 함수 작성   
+    > 외부와의 통신을 위해서 Model 을 직접 사용하지 않고 Vo를 생성하였음 --> 직접 쓰는 것과 장단점이 있음, 상황에 따라 적절한 걸 써야....
+    > react 에서 개발 할 때 localhost:3000 으로 띄워서 테스트를 진행하기 때문에 CrossOrigin 을 설정    
+       
+
+   
+
+# 빌드 및 배포   
+1. docker 이미지로 만들기   
+    board java application도 Docker로 만들어서 배포한다.    
+    1. Dockerfile 생성   
+        Dockerfile 을 만든다. base 이미지는 jre 서버로 하고 빌드 된 바이너리를 복사한 다음 Docker 컨테이너가 시작 할 때 수행 될 명령어를 입력한다.    
+
+        ```Dockerfile
+        FROM openjdk:11.0.16-jre
+
+        ARG APP_FILE
+
+        RUN echo ${APP_FILE}
+        RUN mkdir /logs
+        RUN chown 1000:1000 /logs
+        RUN mkdir /app
+        RUN chown 1000:1000 /app
+
+        USER 1000:1000
+        WORKDIR /app
+        COPY  --chown=1000:1000 ${APP_FILE} /app/app.jar
+
+        EXPOSE 8899
+        ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+        ```
+    2. 이미지 만들기   
+        ```sh
+        docker build --build-arg APP_FILE=target/board*.jar -t blogboard:0.0.1 .
+        ```
+
+        > build-arg 는 Dockerfile에 설정된 APP_FILE 이라는 변수에 값을 세팅하는 옵션   
+        > t 옵션은 이미지의 이름과 버전정보를 세팅   
+
+2. Jenkins를 통한 배포   
+    Jenkins 를 통해 빌드하고 배포한다.    
+    Jenkins 파일을 생성 하고 Jenkins에서 Job을 생성한다.    
+
+    ```Jenkinsfile
+    pipeline {
+        agent any
+        stages {
+            stage('BUILD') {
+                steps {
+                    sh 'mvn package -DskipTests'
+                }
+            }
+            stage('STOP App') {
+                steps {
+                    script {
+                        try {
+                            sh 'docker stop blogboard'
+                            sh 'docker rm blogboard' 
+                        } catch (err) {
+                            echo err.getMessage()
+                            echo 'Stop App Failed'
+                        }
+                    }
+                }
+            }
+            stage('Dockernizer') {
+                steps {
+                    sh 'docker build --build-arg APP_FILE=target/board*.jar -t blogboard:0.0.1 .'
+                }
+            }
+            stage('Deployment') {
+                steps {
+                    sh 'docker run -d --name blogboard blogboard:0.0.1'
+                }
+            }
+        }
+    }
+    ```
+
+    > mvn을 통해 빌드를 수행 -> 동작중인 docker container를 멈추고 삭제 -> 빌드한 바이너리를 다커 이미지로 빌드 -> 새로운 다커 이미지로 컨테이너 실행

@@ -194,7 +194,7 @@ parent: 개발
         export const addBoard = createAsyncThunk('board/addBoard', async (boardObj) => {
             const token = boardObj.token;
             const board = { title: boardObj.title, content: boardObj.content}
-            const response = await axios.post('http://localhost:8899/board', board, {
+            const response = await axios.post('http://192.168.56.1:8899/board', board, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -219,3 +219,5 @@ parent: 개발
     ![logged in](../image/Dev/keycloak-react5.png)  
 
 4. front end 만 키클락에 적용 된 상태이며 백엔드로는 여전히 토큰 값없이 호출이 가능하다. 다음에는 서버의 API Gateway에서 토큰을 정합성 여부를 체크하고 서버로 호출하는 부분을 추가할 예정이다.    
+
+
