@@ -150,6 +150,7 @@ parent: 개발환경
 2. 파이프라인 작성   
    
     1. "Jenkinsfile" 파일 생성 (프로젝트 소스의 루트 디렉토리에 생성)   
+
         ```Jenkinsfile
         pipeline {
             agent any
