@@ -36,17 +36,17 @@ nexus 에 빌드 결과물을 올린다.
 
 
 
-gitlab install
-	project 생성
-	project 소스 올리기
+gitlab install  
+	project 생성  
+	project 소스 올리기  
 
-jenkins install
-	빌드환경설정
-	job 생성
-	gitlab project 설정
+jenkins install  
+	빌드환경설정  
+	job 생성  
+	gitlab project 설정  
 
-nexus install
-	maven proxy, host, group 저장소 생성
-	docker proxy, host, group 저장소 생성
+nexus install  
+	maven proxy, host, group 저장소 생성  
+	docker proxy, host, group 저장소 생성  
 
 파이프라인작성
