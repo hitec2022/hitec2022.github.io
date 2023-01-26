@@ -7,7 +7,7 @@ parent: PrivateCICD
 
 # GitLab 설치   
 
-## 1. gitlab install with Docker
+## gitlab install with Docker
 
 1. gitlab을 Docker로 기동 (출처 : [gitlabDoc][gitlab doc docker]  )
 
@@ -48,3 +48,47 @@ parent: PrivateCICD
         > publish : 사용 포트에 대한 포트포워딩   
             >> 22번포트 제외 (ssh를 통한 git 연결은 하지 않을 예정 )   
             >> 8085포트 추가 (내재되어 있는 mattermost 사용 시)
+
+    4. 로그확인   
+        설치하는 동안 혹은 운영 중에 로그를 확인해 볼 수 있다.    
+        ```sh
+        sudo docker logs -f gitlab
+        ```
+
+    5. 설치 확인 및 로그인   
+        ![gitlab 설치](../image/PrivateCICD/gitlab1.png)   
+
+        * username : root
+        * password
+            ```sh
+            sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
+            ```
+        
+        > 초기 로그인 후에 비밀번호 변경   
+
+## gitlab 설정 변경 및 재시작   
+1. gitlab 의 설정파일은 /etc/gitlab/gitlab.rb 파일이다.   
+    1. 컨테이너에 들어가서 수정할 수도 있으며, 
+        ```sh
+        sudo docker exec -it gitlab /bin/bash
+        vi /etc/gitlab/gitlab.rb
+        ```
+    2. 컨테이너에 바로 수정 명령어를 보낼 수 있다. 
+        ```sh
+        sudo docker exec -it gitlab editor /etc/gitlab/gitlab.rb
+        ```
+2. 설정파일 수정 후 컨테이너 재기동을 통해 설정파일을 적용한다.   
+    ```sh
+    sudo docker restart gitlab
+    ```
+
+
+## permission problems   
+> 컨테이너로 host 의 디렉토리를 mount 하였기 때문에   
+> host 에서의 작업 등으로 인해 디렉토리 및 파일의 권한이 변경될 수 있다.    
+> 이런 경우 gitlab에서 permission 문제가 발생한다.    
+
+```sh
+sudo docker exec gitlab update-permissions
+sudo docker restart gitlab
+```
