@@ -13,6 +13,11 @@
     {% if page.layout != 'feed' %}
     <url>
         <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
+        {% if page.lastmod == null %}
+        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+        <lastmod>{{ page.lastmod | date_to_xmlschema }}</lastmod>
+        {% endif %}
     </url>
     {% endif %}
     {% endif %}
