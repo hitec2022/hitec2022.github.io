@@ -3,6 +3,8 @@ layout: default
 title: virtualbox 리눅스 디스크 늘이기
 nav_order: 1
 parent: 기술팁
+date: 2023-01-31 12:00:00
+lastmod: 2023-01-31 12:00:00
 ---
 
 # virtualbox 리눅스 디스크 늘이기

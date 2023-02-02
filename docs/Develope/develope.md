@@ -3,6 +3,8 @@ layout: default
 title: 개발
 nav_order: 3
 has_children: true
+date: 2022-10-31 12:00:00
+lastmod: 2022-10-31 12:00:00
 ---
 
 # Develop

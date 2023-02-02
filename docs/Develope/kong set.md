@@ -3,6 +3,8 @@ layout: default
 title:  Kong에 서버 설정      
 nav_order: 8
 parent: 개발
+date: 2022-10-31 12:00:00
+lastmod: 2022-10-31 12:00:00
 ---
 
 # API Gateway 인 Kong 과 개발 한 서버 연동     

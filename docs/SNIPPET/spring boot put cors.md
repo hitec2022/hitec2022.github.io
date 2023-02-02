@@ -3,6 +3,8 @@ layout: default
 title: put request cors 에러발생 시 
 nav_order: 2
 parent: 기술팁
+date: 2023-01-31 12:00:00
+lastmod: 2023-01-31 12:00:00
 ---
 
 ## CORS   

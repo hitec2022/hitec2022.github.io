@@ -3,6 +3,8 @@ layout: default
 title: gitlab설치
 nav_order: 1
 parent: PrivateCICD
+date: 2023-01-31 12:00:00
+lastmod: 2023-01-31 12:00:00
 ---
 
 # GitLab 설치   

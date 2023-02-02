@@ -3,6 +3,8 @@ layout: default
 title: react js로 spa 시작하기   
 nav_order: 5
 parent: 개발
+date: 2022-10-31 12:00:00
+lastmod: 2022-10-31 12:00:00
 ---
 
 # React JS 로 SPA 시작하기   

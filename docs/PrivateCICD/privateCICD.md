@@ -3,6 +3,8 @@ layout: default
 title: PrivateCICD
 nav_order: 4
 has_children: true
+date: 2023-01-31 12:00:00
+lastmod: 2023-01-31 12:00:00
 ---
 
 # PrivateCICD

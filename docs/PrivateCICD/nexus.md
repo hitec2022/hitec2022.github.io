@@ -3,6 +3,8 @@ layout: default
 title: nexus설치 
 nav_order: 3
 parent: PrivateCICD
+date: 2023-01-31 12:00:00
+lastmod: 2023-01-31 12:00:00
 ---
 
 # Nexus 설치   

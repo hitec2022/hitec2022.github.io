@@ -3,6 +3,8 @@ layout: default
 title: Spring Boot 게시판 서비스 만들기 (PostgreSql)   
 nav_order: 4
 parent: 개발
+date: 2022-10-31 12:00:00
+lastmod: 2022-10-31 12:00:00
 ---
 
 # Spring Boot 게시판 만들기   
