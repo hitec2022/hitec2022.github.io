@@ -3,6 +3,8 @@ layout: post
 title:  Docker로 실행한 Jenkins 버전 업그레이드   
 nav_order: 3
 parent: 기술팁
+date: 2022-10-31 12:00:00
+lastmod: 2022-10-31 12:00:00
 ---
 
 ## Jenkins Docker 실행 업그레이드       

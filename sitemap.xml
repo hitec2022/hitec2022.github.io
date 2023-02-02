@@ -6,7 +6,7 @@
     <url>
         <loc>{{ site.url }}{{ post.url | remove: 'index.html' }}</loc>
         {% if post.lastmod == null %}
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+            <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
         {% else %}
             <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
         {% endif %}
@@ -18,6 +18,11 @@
     {% if page.layout != 'feed' %}
     <url>
         <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
+        {% if page.lastmod == null %}
+            <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+            <lastmod>{{ page.lastmod | date_to_xmlschema }}</lastmod>
+        {% endif %}
     </url>
     {% endif %}
     {% endif %}
