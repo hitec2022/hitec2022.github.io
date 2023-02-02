@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  Docker로 실행한 Jenkins 버전 업그레이드   
 nav_order: 3
 parent: 기술팁
