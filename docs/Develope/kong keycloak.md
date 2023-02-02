@@ -4,7 +4,7 @@ title:  Kong에 키클락 연동 (OIDC)
 nav_order: 9
 parent: 개발
 date: 2022-10-31 12:00:00
-lastmod: 2022-10-31 12:00:00
+last_modified_date: 2022-10-31 12:00:00
 ---
 
 # Kong 과 Keycloak 연동 (OIDC)       

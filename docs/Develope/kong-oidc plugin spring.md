@@ -4,7 +4,7 @@ title:  Kong OIDC Spring 사용자 정보
 nav_order: 10 
 parent: 개발
 date: 2022-10-31 12:00:00
-lastmod: 2022-10-31 12:00:00
+last_modified_date: 2022-10-31 12:00:00
 ---
 
 # Kong OIDC Spring 사용자 정보       

@@ -8,7 +8,7 @@
         {% if post.lastmod == null %}
             <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
         {% else %}
-            <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
+            <lastmod>{{ post.last_modified_date| date_to_xmlschema }}</lastmod>
         {% endif %}
     </url>
     {% endfor %}
@@ -21,7 +21,7 @@
         {% if page.lastmod == null %}
             <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
         {% else %}
-            <lastmod>{{ page.lastmod | date_to_xmlschema }}</lastmod>
+            <lastmod>{{ page.last_modified_date | date_to_xmlschema }}</lastmod>
         {% endif %}
     </url>
     {% endif %}

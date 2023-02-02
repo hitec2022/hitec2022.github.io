@@ -4,7 +4,7 @@ title: reacj 빌드 nginx 에 배포
 nav_order: 7
 parent: 개발
 date: 2022-10-31 12:00:00
-lastmod: 2022-10-31 12:00:00
+last_modified_date: 2022-10-31 12:00:00
 ---
 
 # React JS 프로젝트 빌드      
