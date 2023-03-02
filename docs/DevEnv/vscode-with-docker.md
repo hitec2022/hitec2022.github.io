@@ -32,7 +32,7 @@ eclipse, intellij, sublime text 등등의 툴들이 있지만
     ![vscode 설치](../image/DevEnv/vscode3.png)   
 
     ![vscode 설치완료](../image/DevEnv/vscode4.png)   
-    > mark done 을 선택하고 설정을 마침   
+    > theme를 선택하고 설정을 마침   
 
 
 ## Docker Install on Windows ##
@@ -42,9 +42,9 @@ eclipse, intellij, sublime text 등등의 툴들이 있지만
 
 2. 설치   
     ![docker 설치](../image/DevEnv/vscode5.png)   
-    > WSL2 는 윈도우즈에서 리눅스를 띄우기에 편리하다. 
-    > WSL2  설치가 우선 진행이 된다. 
-    > 사용하지 않아도 된다. 
+    > WSL2 는 윈도우즈에서 리눅스를 띄우기에 편리하다.    
+    > WSL2  설치가 우선 진행이 된다.    
+    > WSL2는 사용하지 않아도 된다. (hyper-v 를 통해 기동하게된다.)    
 
 3. 설치완료   
     ![docker 설치완료](../image/DevEnv/vscode7.png)   

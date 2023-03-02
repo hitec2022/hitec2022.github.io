@@ -230,7 +230,7 @@ last_modified_date: 2022-10-31 12:00:00
     Jenkins 를 통해 빌드하고 배포한다.    
     Jenkins 파일을 생성 하고 Jenkins에서 Job을 생성한다.    
 
-    ```Jenkinsfile
+    ```groovy
     pipeline {
         agent any
         stages {
