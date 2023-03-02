@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: minimal
 permalink: /404.html
 ---
 
@@ -12,7 +12,6 @@ permalink: /404.html
 <script>
     const url = window.location.pathname;
 
-    // 여기에 fallback 문서 경로 목록을 나열해 준다.
     const fallbackRouter = {
         '/Develope/reactjs nginx deploy.html/': '/docs/Develope/reactjs nginx deploy.html',
         '/PrivateCICD/privateCICD.html': '/docs//PrivateCICD/privateCICD.html',
@@ -26,7 +25,6 @@ permalink: /404.html
         '/wiki/spring-documents-overview/': '/wiki/spring/document/overview/'
     };
 
-    // 현재 주소가 fallback 문서 목록에 존재한다면, 올바른 경로로 보내준다.
     if (fallbackRouter[url]) {
         window.location.href = fallbackRouter[url];
     }
