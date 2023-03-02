@@ -1,0 +1,33 @@
+---
+layout: default
+permalink: /404.html
+---
+
+<div class="container">
+  <h1>404</h1>
+
+  <p><strong>Page not found :(</strong></p>
+  <p>The requested page could not be found.</p>
+</div>
+<script>
+    const url = window.location.pathname;
+
+    // 여기에 fallback 문서 경로 목록을 나열해 준다.
+    const fallbackRouter = {
+        '/Develope/reactjs nginx deploy.html/': '/docs/Develope/reactjs nginx deploy.html',
+        '/PrivateCICD/privateCICD.html': '/docs//PrivateCICD/privateCICD.html',
+        '/DevEnv/virtualbox 설치.html': '/docs//DevEnv/virtualbox 설치.html',
+        '/Develope/kong set.html': '/docs//Develope/kong set.html',
+        '/SNIPPET/기술팁.html': '/docs//SNIPPET/기술팁.html',
+        '/DevEnv/소스형상관리.html': '/docs//DevEnv/소스형상관리.html',
+        '/DevEnv/우분투설치.html': '/docs//DevEnv/우분투설치.html',
+        '/Develope/kong keycloak.html': '/docs//Develope/kong keycloak.html',
+        '/Develope/reactjsinit.html': '/docs//Develope/reactjsinit.html',
+        '/wiki/spring-documents-overview/': '/wiki/spring/document/overview/'
+    };
+
+    // 현재 주소가 fallback 문서 목록에 존재한다면, 올바른 경로로 보내준다.
+    if (fallbackRouter[url]) {
+        window.location.href = fallbackRouter[url];
+    }
+</script>
