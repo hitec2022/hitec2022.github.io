@@ -13,7 +13,7 @@ last_modified_date: 2023-03-29 12:00:00
 ## 메이븐 설정 ##  
 
 pom.xml 파일에 dependency 추가
-```
+```xml
 <dependency>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-web</artifactId>
@@ -24,7 +24,7 @@ pom.xml 파일에 dependency 추가
 spring 설정 파일은 src/resources에 위치한   
 application.properties 혹은 application.yml 파일이다. 
 
-```
+```yaml
 server:
 	port: 8899
 	servlet:
@@ -37,11 +37,11 @@ server:
 > 특별한 상황이 아니면 spring 에 대한 설정은 필요하지 않으며   
 > 서버가 같이 기동하게 됨에 따라 서버의 설정을 일부 설정할 수 있다.    
 
-## Web Sample ##
+## Sample Code ##
 
 controller package 를 만든 후 기본 WebController 를 만든다.    
 sample Controller 의 이름은 HitecController로 지정하고 HitecController.java  파일을 생성한다.    
-```
+```java
 @RestController
 public class HitecController {
 
@@ -61,7 +61,7 @@ Unit Test 는 추후에 설명하려고 한다.
 개발 과정에서 Test를 먼저 작성해야하지만 설명하려니 뭔가 있어야할 것 같아서....
 
 Server를 기동한다. 
-```
+```sh
 mvn spring-boot:run
 ```
 api 테스트 툴로는 postman 이 유명하다.   

@@ -16,7 +16,7 @@ getter, setter 등의 코드를 자동으로 생성해준는 java 라이브러�
 ## 메이븐 설정 ##  
 
 pom.xml 파일에 dependency 추가
-```
+```xml
 <dependency>
     <groupId>org.projectlombok</groupId>
     <artifactId>lombok</artifactId>
@@ -25,7 +25,7 @@ pom.xml 파일에 dependency 추가
 ```
 
 pom.xml 파일의 build plugins 중 spring-boot-maven-plugin 에서 제외 
-```
+```xml
 <plugin>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-maven-plugin</artifactId>
@@ -40,10 +40,10 @@ pom.xml 파일의 build plugins 중 spring-boot-maven-plugin 에서 제외
 </plugin>
 ```
 
-## Web Sample ##
+## Sample Code ##
 
 보드 정보를 입력받는 DTO 클래스를 만든다. 
-```
+```java
 @Getter
 @Setter
 @AllArgsConstructor

@@ -66,7 +66,7 @@ pom.xml 파일에 maven-compiler-plugin을 추가하며 lombok과 mapstruct를 �
 </plugin>
 ```
 
-## JAVA Sample ##
+## Sample Code ##
 DB 의 테이블에 매핑되는 Board 이름의 Entity를 만든다.    
 ```java
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE)

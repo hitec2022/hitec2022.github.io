@@ -26,7 +26,7 @@ last_modified_date: 2023-03-29 12:00:00
 5. mapstruct 세팅 - dto 와 entity 연결
 6. ErrorException 세팅 - exception handler 
 7. Logging 세팅 - log4j 로 설정
-8. JPAtest with testcontainer 세팅 - DB 테스트하기 
+8. DataJpaTest with testcontainer 세팅 - DB 테스트하기 
 9. WebMvcTest세팅 - 웹 테스트 하기
 10. RestDocs 세팅 - 웹 테스트 후 문서 만들기
 

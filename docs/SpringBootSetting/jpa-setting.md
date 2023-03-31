@@ -26,7 +26,7 @@ MSA가 보편화되면서 DB에서 로직을 처리할 수 없는 상황이 점�
 ## 메이븐 설정 ##  
 
 pom.xml 파일에 dependency 추가
-```
+```xml
 <!-- using jpa -->
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -43,7 +43,7 @@ pom.xml 파일에 dependency 추가
 > postgresql driver를 추가하였다. 샘플에서는 postgresql db를 사용할 예정이다.   
 > DB 의 driver는 사용하는 DB 에 맞게 설정하면 된다.    
 
-## Web Sample ##
+## Sample Code ##
 DB 의 테이블에 매핑되는 Board 이름의 Entity를 만든다.    
 ```java
 @Entity(name="board")
@@ -116,7 +116,7 @@ public class BoardService {
 
 ## Spring 설정 ##
 application.yml 파일에 다음과 같이 설정한다.    
-```
+```yaml
 spring:
   datasource:
     url: jdbc:postgresql://<ip>:5432/<dbname>
@@ -142,7 +142,7 @@ JPA 만으로 두꺼운 책이 있을 정도로 많은 내용이 있다.
 ## RUN PostgresqlDB ##
 개발 할 때 필요한 Database를 docker container로 실행한다. 
 
-```
+```sh
 sudo docker run --name db -p 5432:5432 -e POSTGRES_USER=hitec -e POSTGRES_PASSWORD=1234 -e POSTGRES_DB=boarddb -d postgres
 ```
 Docker로 PostgreSql DB를 실행시킨다. 

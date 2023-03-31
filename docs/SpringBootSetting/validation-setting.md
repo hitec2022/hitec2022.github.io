@@ -24,7 +24,7 @@ pom.xml 파일에 dependency 추가
 </dependency>
 ```
 
-## Sample Source ##
+## Sample Code ##
 
 보드 정보를 입력받는 DTO 클래스에   
 @NotBlank, @Size 등의 어노테이션을 적용한다.    

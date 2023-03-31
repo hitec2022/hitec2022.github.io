@@ -11,7 +11,7 @@ last_modified_date: 2023-03-29 12:00:00
 Spring 에서는 Controller 에서 Exception 이 발생했을 때    
 Exception 별로 Handling 을 할 수 있도록 기능을 제공하고 있다.    
 
-## JAVA Sample ##
+## Sample Code ##
 특정한 상황에 발생하는 Exception 을 만든다.        
 ```java
 public class BoardNotFoundException extends RuntimeException{
