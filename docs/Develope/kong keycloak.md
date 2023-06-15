@@ -110,4 +110,7 @@ last_modified_date: 2022-10-31 12:00:00
         > access token 에 대한 정보를 조회 하는 URL (verify 하기 위한 정보)   
         
         config.discovery ex) http://192.168.56.1:8090/auth/realms/hitec/.well-known/openid-configuration
-        > realm 에 대한 정보들을 모아놓은 URL      
+        > realm 에 대한 정보들을 모아놓은 URL     
+
+        config.use_kwks ex) yes
+        > config.discovery가 설정되어 있다면 yes로 설정
