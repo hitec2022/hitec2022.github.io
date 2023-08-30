@@ -35,7 +35,8 @@ kubernetes가 아닌 minikube를 사용하기때문에 알아야 할 팁들을 �
 2. gitlab설치   
 3. minikube registry 설치
 4. jenkins 설치 및 기동   
-5. argocd 설치 및 기동
-6. gitlab 소스 푸쉬 
-7. jenkins pipeline(build and delivery)
-8. deploy to minikube 
+5. argocd 설치 및 기동   
+6. gitlab 소스 푸쉬    
+7. jenkins pipeline(build and delivery)    
+8. deploy to minikube(argocd) 
+9. automation (webhook)
