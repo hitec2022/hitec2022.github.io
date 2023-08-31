@@ -1,6 +1,6 @@
 ---
 layout: default
-title: minikubeCICD
+title: kubernetes CICD (minikube)
 nav_order: 5
 has_children: true
 date: 2023-08-15 12:00:00

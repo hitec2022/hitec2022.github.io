@@ -1,6 +1,6 @@
 ---
 layout: default
-title: PrivateCICD
+title: PrivateCICD with Docker
 nav_order: 4
 has_children: true
 date: 2023-01-31 12:00:00
