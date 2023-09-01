@@ -2,7 +2,7 @@
 layout: default
 title: reacjs 에 keycloak 연동   
 nav_order: 6
-parent: 개발
+parent: 개발(spring boot, kong, keycloak, reactjs) 기본
 date: 2022-10-31 12:00:00
 last_modified_date: 2022-10-31 12:00:00
 ---

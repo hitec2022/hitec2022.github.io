@@ -2,7 +2,7 @@
 layout: default
 title:  Kong OIDC Spring 사용자 정보           
 nav_order: 10 
-parent: 개발
+parent: 개발(spring boot, kong, keycloak, reactjs) 기본
 date: 2022-10-31 12:00:00
 last_modified_date: 2022-10-31 12:00:00
 ---

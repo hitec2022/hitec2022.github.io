@@ -2,7 +2,7 @@
 layout: default
 title: minikbue 설치 및 기동 
 nav_order: 1
-parent: minikubeCICD
+parent: kubernetes CICD (minikube)
 date: 2023-08-15 12:00:00
 last_modified_date: 2023-08-15 12:00:00
 ---

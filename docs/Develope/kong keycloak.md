@@ -2,7 +2,7 @@
 layout: default
 title:  Kong에 키클락 연동 (OIDC)        
 nav_order: 9
-parent: 개발
+parent: 개발(spring boot, kong, keycloak, reactjs) 기본
 date: 2022-10-31 12:00:00
 last_modified_date: 2022-10-31 12:00:00
 ---

@@ -2,7 +2,7 @@
 layout: default
 title: jenkins설치 
 nav_order: 2
-parent: PrivateCICD
+parent: PrivateCICD with Docker
 date: 2023-01-31 12:00:00
 last_modified_date: 2023-01-31 12:00:00
 ---

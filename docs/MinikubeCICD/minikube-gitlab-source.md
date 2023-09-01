@@ -2,7 +2,7 @@
 layout: default
 title: gitlab 소스 push 
 nav_order: 6
-parent: minikubeCICD
+parent: kubernetes CICD (minikube)
 date: 2023-08-15 12:00:00
 last_modified_date: 2023-08-15 12:00:00
 ---
