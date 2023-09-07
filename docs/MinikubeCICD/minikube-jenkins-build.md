@@ -59,6 +59,7 @@ pod 내에 빌드, 테스트 배포 등을 위한 컨테이너가 각각 실행�
       labels:
         builder: jenkins-builder
     spec:
+      serviceAccountName: jenkins-admin
       containers:
         - name: git
           image: alpine/git
@@ -104,6 +105,8 @@ pod 내에 빌드, 테스트 배포 등을 위한 컨테이너가 각각 실행�
           persistentVolumeClaim:
             claimName: maven-pv-claim
     ```
+
+    > serviceAccountName - 쿠버네티스의 권한을 설정한 서비스 어카운트를 설정한다.
 
     > git - 소스를 가져오기 위한 컨테이너    
     > maven - 메이븐 형태의 프로젝트를 빌드 및 테스트 하기 위한 컨테이너 (mavenvolume - 라이브러리를 캐싱)   
