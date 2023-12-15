@@ -1,6 +1,6 @@
 ---
 layout: default
-title: minikbue cicd 자동화   
+title: kubernetes cicd 자동화   
 nav_order: 9
 parent: kubernetes CICD (minikube)
 date: 2023-08-15 12:00:00

@@ -1,13 +1,13 @@
 ---
 layout: default
-title: minikbue argocd install 
+title: kubernetes argocd install 
 nav_order: 5
 parent: kubernetes CICD (minikube)
 date: 2023-08-15 12:00:00
 last_modified_date: 2023-08-15 12:00:00
 ---
 
-# minikube ArgoCD 설치 
+# kubernetes ArgoCD 설치 
 
 ## helm을 통해 argocd 설치 (출처 : [argocd install][argocd install]  )
 

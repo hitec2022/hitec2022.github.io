@@ -1,13 +1,13 @@
 ---
 layout: default
-title: minikbue jenkins install 
+title: kubernetes jenkins install 
 nav_order: 4
 parent: kubernetes CICD (minikube)
 date: 2023-08-15 12:00:00
 last_modified_date: 2023-08-15 12:00:00
 ---
 
-# minikube Jenkins 설치 
+# kubernetes Jenkins 설치 
 
 ## yaml script를 통해 jenkins 설치 (출처 : [jenkins install][jenkins install]  )
 

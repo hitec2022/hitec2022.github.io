@@ -30,13 +30,7 @@ CICD를 위해
 kubernetes가 아닌 minikube를 사용하기때문에 알아야 할 팁들을 정리하고자한다.   
 > 쿠버네티스 공부하려고 minikube까는데 minikube를 잘 몰라서 못하는 경우가 있다. 
 
+# kind 설치
 
-1. minikube 설치 및 기동   
-2. gitlab설치   
-3. minikube registry 설치
-4. jenkins 설치 및 기동   
-5. argocd 설치 및 기동   
-6. gitlab 소스 푸쉬    
-7. jenkins pipeline(build and delivery)    
-8. deploy to minikube(argocd) 
-9. automation (webhook)
+minikube 외에 kind로도 쿠버네티스 환경을 구성할 수 있다. 
+kind로 구성하는 방법도 추가로 작성하고자 한다. 

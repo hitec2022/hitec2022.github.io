@@ -1,13 +1,13 @@
 ---
 layout: default
-title: minikbue gitlab install 
+title: kubernetes gitlab install 
 nav_order: 3
 parent: kubernetes CICD (minikube)
 date: 2023-08-15 12:00:00
 last_modified_date: 2023-08-15 12:00:00
 ---
 
-# minikube gitlab 설치 
+# kubernetes gitlab 설치 
 
 ## helm을 통한 gitlab 설치 (출처 : [gitlab install][gitlab install]  )
 

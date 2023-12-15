@@ -1,13 +1,13 @@
 ---
 layout: default
-title: minikbue argocd 배포  
+title: kubernetes argocd 배포  
 nav_order: 8
 parent: kubernetes CICD (minikube)
 date: 2023-08-15 12:00:00
 last_modified_date: 2023-08-15 12:00:00
 ---
 
-# minikube argocd 배포 
+# kubernetes argocd 배포 
 
 ## kubernetes에 argocd로 배포 
 컨테이너화하여 생성된 이미지를 kubernetes에 배포한다.    
