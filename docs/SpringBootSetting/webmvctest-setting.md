@@ -98,7 +98,7 @@ public class BoardControllerTest {
 
 > @WebMvcTest 어노테이션을 통해 MVC 테스트를 할 것이라고 정의한다.    
 > 웹 요청을 테스트하기 위해 MockMvc 객체를 주입한다.   
-> WebMvc 에서는 Service 가 주입되지 않기 때문에 BpardService 는 MockBean으로 설정한다.    
+> WebMvc 에서는 Service 가 주입되지 않기 때문에 BoardService 는 MockBean으로 설정한다.    
 
 > @Test 를 통해 테스트 함수로 설정한다.    
 > given, will 을 통해 Service 에 수행되는 메소드의 리턴 값을 미리 설정한다.    

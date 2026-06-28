@@ -148,7 +148,7 @@ public class BoardControllerTest {
 }
 ```
 > @AutoConfigureRestDocs를 통해 RestDocs 문서를 작성한다고 설정한다.    
-> schema(http, https), uriHost(localhost, 호스트서버), uriPost(서비스포트) 를 설정한다   
+> schema(http, https), uriHost(localhost, 호스트서버), uriPort(서비스포트) 를 설정한다   
 
 > mockMvc 의 perform 실행 후 andDo 메소드를 통해 document를 등록한다.    
 > document 는 {class-name}/{method-name} 으로 구분할 수 있도록 설정 하였다   

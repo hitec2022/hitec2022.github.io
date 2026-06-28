@@ -13,7 +13,7 @@ last_modified_date: 2022-10-31 12:00:00
     * 스프링 관련된 프로젝트를 손쉽게 생성해주는 사이트
    ![Spring Initializr](../image/Dev/spring1.png)    
 2. 항목선택
-    > Project -> 메이블, 그레들 중 선택
+    > Project -> 메이븐, 그레들 중 선택
     > Language -> java, Kotlin, Groovy 중 선택
     > SpringBoot 버전 선택
     > 프로젝트 메타데이터 선택
@@ -43,7 +43,7 @@ mvn spring-boot:run
 ---
 
 * 웹 테스트를 위해 간단한 코드 추가   
-  controller 디렉토리 생성 후 TestContreoller.java 파일 생성   
+  controller 디렉토리 생성 후 TestController.java 파일 생성   
 
 
 ```java
