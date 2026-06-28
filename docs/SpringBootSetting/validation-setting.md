@@ -58,7 +58,7 @@ public BoardDTO saveBoard(@Valid @RequestBody BoardDTO boardDTO){
 ```
 
 ## spring Validation ##
-자세한 사항은 롬복 홈페이지 참조 [Hibernate validator Homepage](hhttps://docs.jboss.org/hibernate/validator/8.0/reference/en-US/html_single/#validator-gettingstartedttps://projectlombok.org/ "Hibernate validator Homepage")     
+자세한 사항은 Hibernate Validator 홈페이지 참조 [Hibernate validator Homepage](https://docs.jboss.org/hibernate/validator/8.0/reference/en-US/html_single/#validator-gettingstarted "Hibernate validator Homepage")     
 
 주요 어노테이션    
 * @Null  // null만 혀용합니다.

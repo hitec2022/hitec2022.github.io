@@ -64,7 +64,7 @@ public class testClass {
     public void logtest(){
         log.debug("Debug log message");
         log.info("Info log message");
-        log.error("Error log message");log.info();
+        log.error("Error log message");
     }
 }
 ```

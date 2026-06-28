@@ -68,7 +68,7 @@ MSA 시대에 맞게 댓글은 몽고DB를 써보자
 
 mongdb를 docker로 실행
 
-spring jap로 모델링 후 기본 api 만들고
+spring jpa로 모델링 후 기본 api 만들고
 react에서 화면 만들고 kong에 등록
 
 react에서 댓글 불러본다. 
